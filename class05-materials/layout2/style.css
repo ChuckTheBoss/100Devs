@@ -1,0 +1,27 @@
+* {
+    border: solid black 5px;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+}
+
+.middle1 {
+    float: left;
+    width: 33.33%;
+    height: 100px;
+}
+
+.middle2 {
+    float: left;
+    height: 100px;
+    width: 66.66%
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    clear: both;
+}

@@ -1,0 +1,44 @@
+* {
+    color: white;
+    font-family: serif;
+}
+
+body {
+    background-color: rgb(138, 197, 229);
+    border: solid 5px rgb(98, 195, 62);
+    margin: 20px;
+    padding: 20px;
+    width: 800px;
+
+}
+
+img {
+    width: 200px;
+    float: right;
+
+}
+
+h1 {
+    text-align: center;
+
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+a {
+    color: rgb(98, 195, 62);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+header,
+footer {
+    text-align: center;
+}

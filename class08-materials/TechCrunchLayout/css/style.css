@@ -1,0 +1,126 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+}
+
+li>span,
+li>p {
+  color: gray;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav {
+  height: 100%;
+  float: left;
+  width: 20%;
+  color: gray;
+}
+
+nav li {
+  padding: 10%;
+}
+
+main {
+  height: 50%;
+  float: left;
+  width: 80%;
+}
+
+.mainArticle {
+  width: 70%;
+  height: 50%;
+  float: left;
+}
+
+.mainArticleTitle {
+  font-size: 2.5em;
+  margin: 10px;
+  display: inline-block;
+}
+
+#mainArticleImg {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  float: right;
+  width: 30%;
+}
+
+.theLatest {
+  width: 70%;
+  height: 50%;
+  float: left;
+}
+
+.author {
+  font-size: .5em;
+  font-weight: bold;
+  width: 25%;
+}
+
+section.theLatest .title {
+  font-size: 1.4em;
+  font-weight: bolder;
+  float: left;
+}
+
+section.theLatest li {
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+
+.latestArticle {
+  float: left;
+  width: 50%;
+}
+
+.date {
+  font-size: .4em;
+  width: 25%;
+}
+
+.articleSnip {
+  float: right;
+  width: 50%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

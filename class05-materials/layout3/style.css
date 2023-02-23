@@ -1,0 +1,33 @@
+* {
+    border: solid black 5px;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+}
+
+.middle {
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+.middle.second {
+    width: 40%;
+}
+
+.middle.third {
+    float: right;
+}
+
+.middle.fourth {
+    float: right;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    clear: both;
+}

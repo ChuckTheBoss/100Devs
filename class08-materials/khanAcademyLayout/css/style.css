@@ -1,0 +1,81 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav h3 {
+  text-align: center;
+  justify-content: center;
+}
+
+nav li {
+  text-align: right;
+  justify-content: flex-end;
+  display: inline-block;
+}
+
+.search,
+.courses {
+  display: inline-block;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.everyoneButtons {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.mainImg,
+.mainText {
+  width: 30%;
+  padding: 10px;
+}
+
+.whyItWorks {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20%;
+  font-size: 2em;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

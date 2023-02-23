@@ -1,0 +1,114 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgb(46 61 78);
+}
+
+span {
+  color: rgb(119 137 156);
+  font-size: .75em;
+}
+
+button {
+  background-color: rgb(46 61 78);
+  color: white;
+  border: solid rgb(46 61 78);
+  padding: 10px 15px;
+}
+
+form>input {
+  background: rgb(222 229 237);
+  border: solid rgb(222 229 237);
+}
+
+.gather {
+  font-size: 2em;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.navLinks,
+main>div,
+.features {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navLinks>li,
+nav>span {
+  list-style-type: none;
+  padding: 5px;
+}
+
+nav>* {
+  margin: 15px;
+}
+
+main {
+  padding: 5% 0;
+}
+
+main .firstViewText {
+  margin: 5% 15%;
+}
+
+form>input {
+  width: 75%;
+  padding: 10px 0;
+}
+
+form>button {
+  width: 25%;
+}
+
+.features>div {
+  margin: 5%;
+}
+
+.gather {
+  margin: 5%;
+}
+
+/******************************************
+/* THEME
+/*******************************************/
+
+nav {}
+
+nav,
+main {
+  background: rgb(244 248 251);
+}
+
+.gather {
+  background: white;
+}
