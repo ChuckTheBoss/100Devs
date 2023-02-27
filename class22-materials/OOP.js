@@ -65,3 +65,61 @@ console.log(a, b) // {value: 20}, {value: 20}
 Objects are copied by reference
 
 */
+let circle = {};
+circle.location = { x: 1 }; // dot notation
+circle["location"] = { x: 1 }; // bracket notation
+
+// useful for dynamically accessing a property, e.g.
+const propertyName = "location";
+circle[propertyName] = { x: 1 };
+
+/* Abstraction
+Complexity within the object, but the public interface should be simple. 
+Hide the details. Show the essentials. 
+declaring something with "this." will bind the property to the object. 
+However, you can instead declare a function or property as a variable, and it will stay contained within that function and not be accessible. 
+
+*/
+function CircleOther(radius) {
+    this.radius = radius;
+    let defaultLocation = { x: 0, y: 0 }; // not accessible outside of object. 
+    let computeOptimumLocation = function (factor) { // not accessible outside of object. 
+        // ...
+    }
+    this.draw = function () {
+        computeOptimumLocation(0.1);
+        console.log("draw");
+    }
+}
+
+// Stopwatch exercise
+
+function Stopwatch() {
+    let startTime = endTime = 0;
+    let duration;
+    this.start = function () {
+        if (startTime !== 0) {
+            throw new Error("Stopwatch has already started");
+        };
+        startTime = Date.now();
+        console.log("Stopwatch has started");
+    };
+    this.stop = function () {
+        if (startTime === 0) {
+            throw new Error("Stopwatch has not started");
+        }
+        endTime = Date.now();
+        console.log("Stopwatch has stopped");
+    };
+    this.reset = function () {
+        startTime = endTime = duration = 0;
+    };
+    Object.defineProperty(this, "duration", {
+        get: function () {
+            duration = (endTime - startTime) / 1000;
+            return duration;
+        }
+    });
+};
+
+let sw = new Stopwatch();
