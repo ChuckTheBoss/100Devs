@@ -5,18 +5,18 @@ Abstraction
 Inheritance
 Polymorphism
 
-Encaplsulation
+1. Encaplsulation
     Grouping properties and methods that act on data into an object. 
     This makes it possible to make functions with no parameters, since those parameters are defined as part of the object. 
 
-Abstraction
+2. Abstraction
     Hiding some of the properties and methods from the outside. 
     Like an internal API. And interface for complicated processes.
 
-Inheritance
+3. Inheritance
     Helps to reduce redundant code. Enables you to inherit properties from a parent/constructor. 
 
-Polymorphism
+4. Polymorphism
     Many Forms
     gets rid of long if/else or switch/case statements by using .render() based on the object we are referencing. 
 
