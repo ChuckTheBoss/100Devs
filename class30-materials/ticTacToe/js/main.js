@@ -2,16 +2,19 @@ class Square {
     constructor(num) {
         this.num = num;
         document.querySelector(`.square.${this.num}`).addEventListener("click", () => {
-            if (ticTacToe.count % 2 !== 0) {
+            let xsqaureFilled = ticTacToe.count % 2 !== 0 && document.querySelector(`.square.${this.num}`).innerText === "";
+            let osqaureFilled = ticTacToe.count % 2 === 0 && document.querySelector(`.square.${this.num}`).innerText === "";
+            if (xsqaureFilled) {
                 document.querySelector(`.square.${this.num}`).innerText = "X";
                 ticTacToe.player1.push(this.num);
                 console.log(ticTacToe.player1);
-            } else if (ticTacToe.count % 2 === 0) {
+                ticTacToe.count++;
+            } else if (osqaureFilled) {
                 document.querySelector(`.square.${this.num}`).innerText = "O";
                 ticTacToe.player2.push(this.num);
                 console.log(ticTacToe.player2);
+                ticTacToe.count++;
             }
-            ticTacToe.count++;
             ticTacToe.checkWin();
         });
     }
@@ -27,6 +30,11 @@ class Game {
             let num = new Square(square);
             return num;
         });
+        document.querySelector(".newGame").addEventListener("click", () => {
+            this.player1 = [];
+            this.player2 = [];
+            document.querySelectorAll(".square").innerText = "";
+        })
     }
     checkWin() {
         let win1 = this.player1.includes("one") && this.player1.includes("two") && this.player1.includes("three");
@@ -56,7 +64,7 @@ class Game {
         } else {
             console.log("No one has won");
             return "No one has won"
-        }
+        };
     };
 };
 
