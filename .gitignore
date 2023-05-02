@@ -3,3 +3,5 @@
 codewars/
 Chloes_100Devs_FlashCards.apkg
 *.zip
+*node_modules/
+class39-materials/api-project

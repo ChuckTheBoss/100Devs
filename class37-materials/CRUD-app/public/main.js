@@ -11,7 +11,7 @@ document.querySelector('#update-button').addEventListener('click', () => {
         .then(res => {
             if (res.ok) return res.json()
         })
-        .then(response => {
+        .then(res => {
             window.location.reload(true)
         })
 })
@@ -29,7 +29,7 @@ document.querySelector('#delete-button').addEventListener('click', _ => {
         })
         .then(response => {
             if (response === 'No quote to delete') {
-                messageDiv.textContent = 'No Darth Vader quote to delete'
+                document.querySelector("#message").textContent = 'No Darth Vader quote to delete'
             } else {
                 window.location.reload(true)
             }
